@@ -13,10 +13,11 @@ add_slider = st.sidebar.slider(step=1,
 #input box
 int_put = st.text_input('Ask about your disease here:')
 if int_put:
+   with st.spinner('Please wait...'):
     st.write('your results for request: ', int_put)
     text = int_put
     max1 =int(add_slider)  # ilosc zapytan ze slidera
-
+   
     #wporwadzenie zapytania do pubmed
     pubmed = PubMed(tool="MyTool", email="p.karabowicz@gmail.com")
     results1 = pubmed.query(text, max_results=max1)
@@ -58,4 +59,4 @@ if int_put:
      gen.append(k)
      val.append(ww[k])
     df = pd.DataFrame(list(zip(gen, val)), columns =['Name', 'value'])
-    df
+   df
