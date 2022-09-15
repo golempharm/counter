@@ -6,7 +6,7 @@ st.title('GoLem Pharm')
 st.write('')
 
 # Add a slider to the sidebar:
-add_slider = st.sidebar.slider(step=1
+add_slider = st.sidebar.slider(step=1,
     'Select a number of abstracts ',
     0, 10000, 1000)
 
