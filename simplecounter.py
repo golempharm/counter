@@ -7,8 +7,8 @@ st.write('')
 
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(step=1,
-    'Select a number of abstracts ',
-    0, 10000, 1000)
+    label = 'Select a number of abstracts ',
+    min_value=0, max_value=10000, value=1000)
 
 #input box
 int_put = st.text_input('Ask about your disease here:')
