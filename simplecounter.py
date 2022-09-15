@@ -60,5 +60,5 @@ if int_put:
      val.append(ww[k])
     df = pd.DataFrame(list(zip(gen, val)), columns =['Name', 'value'])
    st.write('your results for request: ', int_put)
-   st.balloons()
+   st.snow()
    df
