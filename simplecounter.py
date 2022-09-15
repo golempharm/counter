@@ -14,7 +14,7 @@ add_slider = st.sidebar.slider(step=1,
 int_put = st.text_input('Ask about your disease here:')
 if int_put:
    with st.spinner('Please wait...'):
-    st.write('your results for request: ', int_put)
+    
     text = int_put
     max1 =int(add_slider)  # ilosc zapytan ze slidera
    
@@ -59,4 +59,6 @@ if int_put:
      gen.append(k)
      val.append(ww[k])
     df = pd.DataFrame(list(zip(gen, val)), columns =['Name', 'value'])
+   st.write('your results for request: ', int_put)
+   st.balloons()
    df
